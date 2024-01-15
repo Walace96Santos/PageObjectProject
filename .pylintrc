@@ -6,8 +6,14 @@ ignore=CVS
 # Message Control
 [MESSAGES CONTROL]
 # Enable messages for unused variables and imports
-enable=unused-variable,unused-import
-disable=missing-docstring
+enable=
+    unused-variable,
+    unused-import
+
+disable=
+    missing-docstring,
+    too-few-public-methods,
+    W0603
 
 # Basic Settings
 [BASIC]
@@ -26,6 +32,7 @@ indent-string='    '
 [TYPECHECK]
 # Minimum Python version for type checking
 py-version=3.8
+# Ignore too-few-public-methods for all classes
 
 # Design Settings
 [DESIGN]

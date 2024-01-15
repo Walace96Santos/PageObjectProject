@@ -27,3 +27,8 @@ repos:
       - id: flake8
         name: Flake8
         args: ['--ignore', 'E501,W503,F403,E129,E126']
+
+  - repo: https://github.com/ducminh-phan/reformat-gherkin
+    rev: v3.0.1
+    hooks:
+      - id: reformat-gherkin

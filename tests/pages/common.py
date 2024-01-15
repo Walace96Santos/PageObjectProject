@@ -1,7 +1,7 @@
-import conftest
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
+import conftest
 
 
 class CommonMethods:
@@ -48,4 +48,3 @@ class CommonMethods:
             except NoSuchElementException:
                 pass
         raise NoSuchElementException(f"Element {locator} not found after scrolling.")
-
