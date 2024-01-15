@@ -1,0 +1,42 @@
+# General Settings
+[MASTER]
+# Ignore CVS directories during analysis
+ignore=CVS
+
+# Message Control
+[MESSAGES CONTROL]
+# Enable messages for unused variables and imports
+enable=unused-variable,unused-import
+
+# Basic Settings
+[BASIC]
+# Good names for simple variables
+good-names=i,j,k
+
+# Formatting Settings
+[FORMAT]
+# Maximum line width
+max-line-length=120
+
+# Indentation String
+indent-string='    '
+
+# Type Checking Settings
+[TYPECHECK]
+# Minimum Python version for type checking
+py-version=3.8
+
+# Design Settings
+[DESIGN]
+# Maximum number of arguments in functions/methods
+max-args=5
+
+# Import Settings
+[IMPORTS]
+# Disable checking for deprecated modules in imports
+deprecated-modules=
+
+# Spelling Settings
+[SPELLING]
+# Do not store unknown words in the private dictionary
+spe
