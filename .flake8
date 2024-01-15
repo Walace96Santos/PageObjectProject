@@ -6,12 +6,17 @@ exclude =
 max-line-length = 120
 select = B,C,E,F,W,T4,B9
 
-ignore =
-     E501,  # Line too long: Ignored here but treated on pylintrc
-     W503,  # Line break before binary operator
-     F403,  # Unable to find undefined names
-     E129,  # Visually indented line with same indent as next logical line
-     E126   # Continuation line over-indented for hanging indent
+extend-ignore =
+     # Line too long: Ignored here but treated on pylintrc
+     E501,
+     # Line break before binary operator
+     W503,
+     # Unable to find undefined names
+     F403,
+     # Visually indented line with same indent as next logical line
+     E129,
+     # Continuation line over-indented for hanging indent
+     E126
 
 # F401: Module imported but unused (ignored in __init__.py files)
 # F811: Function redefined (ignored on test step files)

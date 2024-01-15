@@ -1,7 +1,29 @@
-# .pre-commit-config.yaml
 repos:
-  - repo: https://github.com/pycqa/flake8
-    rev: 7.0.0  # Use the sha / tag you want to point at
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
     hooks:
-    - id: flake8
-      files: \.py$
+      - id: check-json
+      - id: check-yaml
+      - id: trailing-whitespace
+
+  - repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v3.0.0a5
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: system
+        types: [ python ]
+        args:
+          [
+            "-rn",
+            "-sn",
+            "--rcfile=.pylintrc",
+          ]
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8
+        name: Flake8
+        args: ['--ignore', 'E501,W503,F403,E129,E126']
