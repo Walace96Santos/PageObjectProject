@@ -7,6 +7,7 @@ ignore=CVS
 [MESSAGES CONTROL]
 # Enable messages for unused variables and imports
 enable=unused-variable,unused-import
+disable=missing-docstring
 
 # Basic Settings
 [BASIC]
