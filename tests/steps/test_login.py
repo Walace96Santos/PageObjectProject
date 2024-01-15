@@ -33,7 +33,6 @@ def step_when_user_clicks_on_login_button(driver):
 
 
 
-
 @then('the user should be redirected to the home page')
 def step_then_user_should_be_redirected_to_home_page(driver):
     time.sleep(3)
