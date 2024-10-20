@@ -8,6 +8,9 @@ class LoginPage(CommonMethods):
         super().__init__()
         self.mapping = LoginMapping()
 
+    def is_on_focus(self):
+        return self.is_visible(self.mapping.TITLE_LABEL)
+
     def wait_for_login_page_to_load(self):
         self.wait_until_element_is_visible(self.mapping.USERNAME_INPUT)
 
@@ -17,3 +20,6 @@ class LoginPage(CommonMethods):
 
     def click_login_button(self):
         self.wait_until_element_is_clickable(self.mapping.LOGIN_BUTTON).click()
+
+    def is_error_message_displayed(self):
+        assert self.is_visible(self.mapping.ERROR_MESSAGE), "Error message is not displayed"

@@ -27,7 +27,8 @@ class CommonMethods:
 
     def is_visible(self, locator, timeout=5):
         try:
-            self.wait_until_element_is_visible(locator, timeout)
+            element_present = EC.presence_of_element_located(locator)
+            WebDriverWait(self.driver, timeout).until(element_present)
             return True
         except NoSuchElementException:
             return False
