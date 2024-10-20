@@ -4,8 +4,8 @@ from tests.mappings.login import LoginMapping
 
 class LoginPage(CommonMethods):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, driver):
+        super().__init__(driver)
         self.mapping = LoginMapping()
 
     def is_on_focus(self):

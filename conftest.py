@@ -1,19 +1,19 @@
 import pytest
 from selenium import webdriver
-
-driver: webdriver.Remote
+from selenium.webdriver.chrome.options import Options
 
 
 @pytest.fixture
 def driver():
     # setup
-    global driver
-    driver = webdriver.Chrome()
-    driver.maximize_window()
-    driver.get("https://www.saucedemo.com/")
+    options = Options()
+    options.headless = False
+    webdriver_instance = webdriver.Chrome(options=options)
+    webdriver_instance.maximize_window()
+    webdriver_instance.get("https://www.saucedemo.com/")
 
     # run tests
-    yield driver
+    yield webdriver_instance
 
     # tear down
-    driver.quit()
+    webdriver_instance.quit()

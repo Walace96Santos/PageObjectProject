@@ -1,12 +1,11 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
-import conftest
 
 
 class CommonMethods:
-    def __init__(self):
-        self.driver = conftest.driver
+    def __init__(self, driver):
+        self.driver = driver
 
     def open_url(self, url):
         self.driver.get(url)
